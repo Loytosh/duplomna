@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background: #b2ebf2;
+	font-family: "Roboto", sans-serif;
+	font-size: 19px;
+}
+
+#searchs {
+	width: 100%;
+	text-align: center;
+	float: left;
+	width: 80%;
+}
+#add {
+	width: 20%;
+	height: 90%;
+	text-align: center;
+	float: right;
+}
+.resultsearch {
+	width: 65%;
+	margin-top: 80px;
+	margin-left: 120px;
+	text-align: left;
+}
