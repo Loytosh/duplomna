@@ -10,9 +10,6 @@
 	$specialnist = $_POST['specialnist'];
 	$grup = $_POST['grup'];
 	$predmeti = $_POST['predmeti'];
-
-	$sas = $_POST['bio']; echo $sas."1 <br>";
-	$savedb = $_POST['setings']; echo $savedb."2 <br>";
 ?>
 
 <html> 
@@ -36,11 +33,6 @@
 	<!--<meta http-equiv="refresh" content="0.5;URL=../setings.php" /> html звичайний редірект-->
 </html>
 <?
-	if ($sas == "bio"){
-		echo "<meta http-equiv='refresh' content='0.5;URL=index.php' />";
-	}else if ($savedb == "setings"){
-		echo "<meta http-equiv='refresh' content='0.5;URL=setings.php' />";
-	}
-
+	echo "<meta http-equiv=\"refresh\" content=\"0.5;url=" . $_SERVER['HTTP_REFERER'] . "\">";
 ?>
 <!--echo "<meta http-equiv=\"refresh\" content=\"0.5;url=" . $_SERVER['HTTP_REFERER'] . "\">"; //PHP редірект на попередню сторінку

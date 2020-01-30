@@ -73,9 +73,25 @@
 		
 			<br><h3>Редагувати</h3><br><br>
 			
-			<form method="LINK" action="setings.php">
+			<form method="LINK" action="setings.php"> <!--Спільна база даних-->
 				<input type="submit" value="База даних" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form>
+			</form><br>
+			
+			<form method="LINK" action="setingsfakultet.php"> <!--База факультетів-->
+				<input type="submit" value="Факультет" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
+			</form><br>
+
+			<form method="LINK" action="setingskafedra.php"> <!--База кафедр-->
+				<input type="submit" value="Кафедра" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
+			</form><br>
+
+			<form method="LINK" action="setingsspecialnist.php"> <!--База спеціальностей-->
+				<input type="submit" value="Спеціальність" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
+			</form><br>
+
+			<form method="LINK" action="setingsgrup.php"> <!--База груп-->
+				<input type="submit" value="Група" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
+			</form><br>
 			
 		</div>
 	</body>
