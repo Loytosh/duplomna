@@ -80,7 +80,7 @@
 
 				<select name="grup" style="width: 75%;"> 
 					<option selected><?echo $row['grup']?></option>
-						<? $sql5 = "SELECT * FROM grup";
+						<? $sql5 = "SELECT * FROM grup ORDER BY grup";
 							$result5 = mysqli_query($link, $sql5); 
 							while ($row5 = mysqli_fetch_array($result5)) {
 								print("<option>".$row5['grup']."</option>"); } ?>
