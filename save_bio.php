@@ -1,4 +1,4 @@
-﻿<?
+<?
 	$id = $_POST['id'];
 	$id_fo = $_POST['id_fo'];
 	$lastname = $_POST['lastname'];
@@ -29,7 +29,16 @@
 		?>
 	</body>
 <!--	<meta http-equiv="refresh" content="0.5;URL=../setings.php" />  html звичайний редірект -->
+	<script>
+		var timer1 = setInterval("window_close()", 500); // Встановлює інтервал, функція яку викликати в 1000 мл.
+		
+		function window_close () {
+			window.close();
+		}
+	</script>
 </html>
 <?
-	echo "<meta http-equiv=\"refresh\" content=\"0.5;url='../setings.php#id$id' \">"; //PHP редірект на попередню сторінку на маяк #id$id
+
+	
+	//echo "<meta http-equiv=\"refresh\" content=\"0.5;url='../bio.php#id$id' \">"; //PHP редірект на попередню сторінку
 ?>

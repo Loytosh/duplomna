@@ -12,7 +12,7 @@
 		<form method="LINK" action="index.php">
 			<input type="submit" value="Головна" style="font-family: 'Roboto', sans-serif; font-size: 14px; width: 80px; margin-left: 60px; margin-top: 10px;">
 		</form>
-		
+<!--		<a href="#save3">перехід на перший елемент</a> <!--тест перехід по елементу -->
 		<div id="searchs">
 			<br><h3>База даних</h3><br>
 
@@ -30,7 +30,8 @@
 					$sql = "SELECT * FROM student";
 					$result = mysqli_query($link, $sql);
 					
-					while ($row = mysqli_fetch_array($result)) { 
+					$i = 1;
+					while ($row = mysqli_fetch_array($result)) { $i++;
 				?>
 					
 		<form action="save_setings.php" method="POST">
@@ -47,8 +48,8 @@
 				Предмети : <sub>(beta)</sub><br>
 			</div>
 					
-			<div style="margin-left: 150px; font-size: 14px; width: 99%;">
-				<input type="text" name="id" value="<?echo $row['id']?>" style="display: none;">
+			<div style="margin-left: 150px; font-size: 14px; width: 99%; position: relative;">
+				<input id="id<?echo$row['id']?>" type="text" name="id" value="<?echo $row['id']?>" style="margin-top: -20px; display: absolute; opacity: 0; width: 100px;" readonly><br>
 				<input type="text" style="width: 75%;" name="id_fo" value="<?echo $row['id_fo']?>"><br>
 				<input type="text" style="width: 75%;" name="lastname" value="<?echo $row['lastname']?>"><br>
 				<input type="text" style="width: 75%;" name="name" value="<?echo $row['name']?>"><br>
@@ -85,9 +86,10 @@
 							while ($row5 = mysqli_fetch_array($result5)) {
 								print("<option>".$row5['grup']."</option>"); } ?>
 				</select><br>
-				<input type="text" style="width: 75%;" name="predmeti" value="<?echo $row['predmeti']?>">
+<!--				<input type="text" style="width: 75%;" name="predmeti" value="<?//echo $row['predmeti']?>">-->
+				<textarea style="width: 75%; height: 300px;" name="predmeti"><?echo $row['predmeti']?></textarea>
 				
-				<input type="submit" name="setings" value=" Зберегти " style="text-decoration: none; color: #0ac400;">
+				<input type="submit" name="save" value=" Зберегти " style="text-decoration: none; color: #0ac400;">
 				<a href="?del=<?echo $row['id']?>" style="text-decoration: none; color: #e83c3c;"> Видалити </a><br>
 			</div>
 		</form>

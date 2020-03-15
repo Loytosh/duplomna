@@ -9,21 +9,25 @@
 	
 	<? include 'header.php'; ?>
 	<body>
-		
+		<form method="LINK" action="index.php">
+			<input type="submit" value="Головна" style="font-family: 'Roboto', sans-serif; font-size: 14px; width: 80px; margin-left: 60px; margin-top: 10px;">
+		</form>
 		<div id="searchs">
 			
-			<br><h3 style="margin-left: 20%;">Пошук</h3><br>
+			<br><h3 style="margin-left: 20%;">Додати студента</h3><br>
 			
-			<form name="bio" action="bio.php" method="POST" >
+			<form name="bio" action="save_addstudent.php" method="POST" >
 			<div style="float: left; font-size: 16px; text-align: left; margin-left: 30%;">
 				ID ФО : <br>
 				Прізвище : <br>
 				Ім'я : <br>
 				По батькові : <br>
+				Дата народження: <br>
 				Факультет : <br>
 				Кафедра : <br>
 				Спеціальність : <br>
 				Група : <br>
+				
 			</div>
 			
 			<div style="margin-left: -100px; font-size: 14px; width: 99%;">
@@ -31,6 +35,7 @@
 				<input type="text" style="width: 40%;" name="lastname"><br>
 				<input type="text" style="width: 40%;" name="name"><br>
 				<input type="text" style="width: 40%;" name="by_father"><br>
+				<input type="date" style="width: 40%;" name="birthday"><br>
 				<select name="fakultet" style="width: 40%;">
 					<option selected></option>
 						<? $sql2 = "SELECT * FROM fakultet";
@@ -65,39 +70,8 @@
 			</div>
 
 				
-				<input type="submit" value="Підтвердити" style="margin: 8px; margin-left: 20%;font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
+				<input type="submit" value="Додати" style="margin: 8px; margin-left: 20%;font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
 			</form>
-			
-		</div>
-		
-		<div id="add">
-		
-			<br><h3>Редагувати</h3><br><br>
-			
-			<form method="LINK" action="addstudent.php"> <!--Додати студента-->
-				<input type="submit" value="Додати студента" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form><br>
-			
-			<form method="LINK" action="setings.php"> <!--Спільна база даних-->
-				<input type="submit" value="База даних" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form><br>
-			
-			<form method="LINK" action="setingsfakultet.php"> <!--База факультетів-->
-				<input type="submit" value="Факультет" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form><br>
-
-			<form method="LINK" action="setingskafedra.php"> <!--База кафедр-->
-				<input type="submit" value="Кафедра" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form><br>
-
-			<form method="LINK" action="setingsspecialnist.php"> <!--База спеціальностей-->
-				<input type="submit" value="Спеціальність" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form><br>
-
-			<form method="LINK" action="setingsgrup.php"> <!--База груп-->
-				<input type="submit" value="Група" style="font-family: 'Roboto', sans-serif; font-size: 16px; width: 150px;">
-			</form><br>
-			
 		</div>
 	</body>
 	<? include 'footer.php'; ?>

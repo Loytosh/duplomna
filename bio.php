@@ -50,7 +50,7 @@
 					while ($row = mysqli_fetch_array($result)) { 
 			?>
 						
-			<form action="save_setings.php" method="POST">
+			<form action="save_bio.php" method="POST" target="_blank">
 				<div style="float: left; font-size: 16px;">
 					ID ФО : <br>
 					Прізвище : <br>
@@ -102,7 +102,7 @@
 								while ($row5 = mysqli_fetch_array($result5)) {
 									print("<option>".$row5['grup']."</option>"); } ?>
 					</select><br>
-					<input type="text" style="width: 75%;" name="predmeti" value="<?echo $row['predmeti']?>">
+					<textarea style="width: 75%; height: 300px;" name="predmeti"><?echo $row['predmeti']?></textarea>
 					
 					<input type="submit" name="bio" value=" Зберегти " style="text-decoration: none; color: #0ac400;">
 					<a href="?del=<?echo $row['id']?>" style="text-decoration: none; color: #e83c3c;"> Видалити </a><br>
