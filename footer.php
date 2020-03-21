@@ -1,14 +1,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/style_footer.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	
 	
 	
 	<body>
-		<div id="footer">
-			копирайт, права, все таке
+		<div class="footer">
+			© Yanek Loytosh
+			
+			<form class="form_exit" action="exit_session.php">
+				<button class="exit">Вийти</button>
+			</form>
 		</div>
 	</body>
 </html>

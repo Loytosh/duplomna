@@ -5,14 +5,13 @@
 }
 body {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	background: #b2ebf2;
 	font-family: "Roboto", sans-serif;
 	font-size: 19px;
 }
 
 #searchs {
-	width: 100%;
 	text-align: center;
 	float: left;
 	width: 80%;
@@ -29,3 +28,39 @@ body {
 	margin-left: 120px;
 	text-align: left;
 }
+.footer {
+	margin-top: 86vh;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 15px;
+	background: #00a0b5;
+	font-family: 'Roboto', sans-serif;
+}
+.exit {
+	right: 10px;
+	width: 70px;
+	height: 20px;
+	right: 60px;
+	bottom: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

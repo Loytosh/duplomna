@@ -1,4 +1,31 @@
-<html>
+<?php
+session_start();
+
+$admin_login="admin"; //Логін адміна
+$admin_password="admin"; //Пароль адміна
+ 
+if(isset($_POST['password'])):
+$_SESSION[$_POST['login']]=$_POST['password'];
+header("Location: {$_SERVER['PHP_SELF']}");
+exit;
+endif;
+ 
+if($_SESSION[$admin_login]!=$admin_password)
+{
+?>
+	<meta charset="utf-8">
+	<form style="text-align: center; font-size: 17px;" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+		Логін: <input type="text" name="login" style="width: 150px; margin-left: 18px; margin-bottom: 5px;"><br>
+		Пароль: <input type="password" name="password" style="width: 150px; margin-bottom: 5px;"><br>
+		<input type="submit" value="Підтвердити">
+	</form>
+<?php
+exit;
+}
+else
+{?>
+  
+   <html>
 	<head>
 		<title>Особова картка студента</title>
 		<meta charset="utf-8">
@@ -15,7 +42,7 @@
 			<br><h3 style="margin-left: 20%;">Пошук</h3><br>
 			
 			<form name="bio" action="bio.php" method="POST" >
-			<div style="float: left; font-size: 16px; text-align: left; margin-left: 30%;">
+			<div style="float: left; font-size: 16px; text-align: left; margin-left: 20%;">
 				ID ФО : <br>
 				Прізвище : <br>
 				Ім'я : <br>
@@ -99,6 +126,17 @@
 			</form><br>
 			
 		</div>
-	</body>
-	<? include 'footer.php'; ?>
-</html>
+		
+		<div class="footer">
+			© Yanek Loytosh
+			
+			<form class="form_exit" action="exit_session.php">
+				<button class="exit">Вийти</button>
+			</form>
+		</div>
+		</body>
+	</html>
+   
+<?php
+}
+?>
